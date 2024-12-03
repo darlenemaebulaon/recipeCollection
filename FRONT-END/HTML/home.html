@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App - Home</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <nav id="navbar"></nav>
+
+    <div class="home-container">
+
+        <!-- Header section with the welcome message -->
+        <header>
+            <h1>WELCOME TO THE RECIPE APP</h1>
+        </header>
+
+        <section>
+            <p>Explore and manage your recipes with ease! Use the navigation links above to add a new recipe, view all recipes, or dive into the details of specific ones.</p>
+        </section>
+
+        <div class="button-container">
+            <!-- Button to navigate to the Add Recipe page -->
+            <button onclick="navigateTo('../HTML/addRecipe.html')">ADD YOUR RECIPE NOW!</button>
+        </div>
+    </div>
+
+    <!-- External JS for handling navigation -->
+    <script src="../navigation/navbar.js"></script>
+
+    <script>
+        // Function to navigate to the specified URL
+        function navigateTo(url) {
+            window.location.href = url;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+    <link rel="stylesheet" href="../styles.css">
+    
+</head>
+<body>
+
+    <!-- Notification container for displaying success or error messages -->
+    <div id="notification-container" class="notification-container"></div>
+
+    <!-- Navigation bar -->
+    <nav id="navbar"></nav>
+
+    <div class="container">
+        <header>
+            <h1>ADD YOUR RECIPE</h1>
+        </header>
+
+        <!-- Recipe form for submitting a new recipe -->
+        <form id="recipe-form">
+            <input type="text" id="recipe-name" placeholder="Recipe Name" required>
+            <textarea id="ingredients" placeholder="Ingredients (one per line)" required></textarea>
+            <textarea id="instructions" placeholder="Instructions (one per line)" required></textarea>
+            <div class="button-container">
+                <button type="submit">Add Recipe</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- External JS files for recipe form handling and navigation -->
+    <script src="../JS/addRecipe.js"></script>
+    <script src="../navigation/navbar.js"></script>
+
+</body>
+</html>

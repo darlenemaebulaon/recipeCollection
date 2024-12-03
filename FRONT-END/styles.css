@@ -1,0 +1,383 @@
+/* Root variables for light mode */
+:root {
+  --bg-light: #f4f4f9;
+  --text-light: #333;
+  --button-light: #d95d39;
+  --button-hover-light: #b94c2f;
+  --input-light: #fff;
+  --recipe-item-light: #f3f3f3;
+  --text-light-dark: #fff;
+  --title-light: #333;
+  --input-border-light: #ddd;
+  --button-gradient-light: linear-gradient(135deg, #ff7a59, #d95d39);
+  --button-hover-gradient-light: linear-gradient(135deg, #d95d39, #b94c2f);
+}
+
+/* Styles for dark mode */
+body.dark-mode {
+  --bg-dark: #121212; /* Darker background */
+  --text-dark: #fff;
+  --button-dark: #7f39fb;
+  --button-hover-dark: #5a29b0;
+  --input-dark: #333;
+  --recipe-item-dark: #2e2e3e;
+  --title-dark: #fff;
+  --input-border-dark: #555;
+  --button-gradient-dark: linear-gradient(135deg, #9b57f5, #7f39fb);
+  --button-hover-gradient-dark: linear-gradient(135deg, #7f39fb, #5a29b0);
+}
+
+/* General body styling */
+body {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://images.pexels.com/photos/1640770/pexels-photo-1640770.jpeg?auto=compress&cs=tinysrgb&w=1600&h=1000&dpr=1'); /* High-quality light background image */
+  background-size: cover; /* Ensures the background covers the whole page */
+  background-position: center; /* Centers the background image */
+  background-attachment: fixed; /* Keeps the background fixed while scrolling */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the page takes at least the full height of the viewport */
+}
+
+/* Dark mode body styling */
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+  background-image: url('https://images.pexels.com/photos/952356/pexels-photo-952356.jpeg?auto=compress&cs=tinysrgb&w=1600&h=1000&dpr=1'); /* High-quality dark mode background image */
+}
+
+/* Container for general content */
+.container {
+  max-width: 1000px; /* Increased width for a larger container */
+  width: 90%; /* Takes up 90% of the viewport width, but not too wide */
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  min-height: 350px; /* Adjusted height to be less tall */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+} 
+
+/* Styling for home container */
+.home-container {
+  max-width: 1000px; /* Increased width for a larger container */
+  width: 90%; /* Takes up 90% of the viewport width, but not too wide */
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  min-height: 350px; /* Adjusted height to be less tall */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} 
+ 
+/* Styling for header content */
+.home-container h1{
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  font-size: 60px;
+  color: #333333;
+  margin-top: 40px;
+}
+
+.home-container p{
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  font-size:20px;
+  color: #333333;
+  margin-top: 15px;
+  margin-bottom: 80px;
+}
+
+
+/* Dark mode container styling */
+body.dark-mode .container {
+  background-color: var(--bg-dark);
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Theme toggle button styling */
+#theme-toggle {
+  padding: 10px 20px;
+  border: none;
+  background-color: transparent;
+  color: var(--text-light);
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.mode-icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+/* Form styling */
+#recipe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid var(--input-border-light);
+  border-radius: 4px;
+  background-color: var(--input-light);
+  color: var(--text-light);
+  transition: all 0.3s ease;
+}
+
+/* Dark mode input and textarea styling */
+body.dark-mode input,
+body.dark-mode textarea {
+  background-color: var(--input-dark);
+  color: var(--text-dark);
+  border-color: var(--input-border-dark);
+}
+
+/* Textarea specific styling */
+textarea {
+  min-height: 150px;
+  resize: vertical;
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+/* Button styling */
+button {
+  background: var(--button-gradient-light);
+  color: var(--text-light-dark);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  background: var(--button-hover-gradient-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode button styling */
+body.dark-mode button {
+  background: var(--button-gradient-dark);
+  color: var(--text-dark);
+}
+
+body.dark-mode button:hover {
+  background: var(--button-hover-gradient-dark);
+}
+
+/* Recipe item button styling */
+.recipe-item button {
+  background: var(--button-gradient-light);
+  color: var(--text-light-dark);
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recipe-item button:hover {
+  background: var(--button-hover-gradient-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .recipe-item button {
+  background: var(--button-gradient-dark);
+  color: var(--text-dark);
+}
+
+body.dark-mode .recipe-item button:hover {
+  background: var(--button-hover-gradient-dark);
+}
+
+.recipe-list {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.recipe-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: var(--recipe-item-light);
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode .recipe-item {
+  background-color: var(--recipe-item-dark);
+}
+
+.recipe-item h3,
+.recipe-item p {
+  color: var(--text-light);
+}
+
+body.dark-mode .recipe-item h3,
+body.dark-mode .recipe-item p {
+  color: var(--text-dark);
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 20px;
+    width: 100%; /* Full width on smaller screens */
+  }
+}
+
+/* Notification Styles */
+.notification-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+.notification {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.notification.success {
+  background-color: #4caf50;
+  color: white;
+}
+
+.notification.error {
+  background-color: #f44336;
+  color: white;
+}
+
+/* General reset */
+body, ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar container */
+.navbar {
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+}
+
+/* Brand styling */
+.navbar-brand a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Links container */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+/* Individual link styles */
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #ffa500; /* Highlight color */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+nav .logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #575757;
+  border-radius: 4px;
+}
